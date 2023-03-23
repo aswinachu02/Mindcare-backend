@@ -20,7 +20,7 @@ def predict():
         data = {"prediction": prediction}
         return jsonify({"success": True, "data": data})
     except Exception as err:
-        return jsonify({"success": False, "data": err})
+        return jsonify({"success": False, "data": str(err)})
 
 
 if __name__ == "__main__":
